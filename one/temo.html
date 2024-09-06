@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide-In Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+width: 150px;
+    color: #333;
+}
+
+.bold {
+    font-weight: bold;
+    color: #e60000;
+}
+
+.menu-btn {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    
+}
+
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #acaaaa;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-nav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    background-color: #e6dcdc;
+}
+.log{
+    width: 150px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+main {
+    margin-left: 20px;
+}
+#one,#two,#three{
+    width: 30px;
+    height: 2px; 
+    background-color: #333;
+   margin-right: 150PX;
+}
+#one{
+   margin-bottom: 3px;
+}
+#two{
+    margin-bottom: 3px;
+}
+
+</style>
+<body>
+    <header>
+        <img class="logo" src="https://infomedia.com/wp-content/themes/kronos/assets/imgs/Infomedia-30th.svg" alt="">
+    
+        <button class="menu-btn" id="menuBtn"><div id="one"></div>
+        <div id="two"></div>
+        <div id="three" ></div>
+       </button>
+    </header>
+
+    <nav id="sideNav" class="side-nav">
+        <img class="log" src="https://infomedia.com/wp-content/themes/kronos/assets/imgs/Infomedia-30th.svg" alt="">
+        <a href="javascript:void(0)" class="close-btn" id="menuBtn">&times;</a>
+        <a href="#">SERVICES</a>
+        <a href="#">PORTFOLIO</a>
+        <a href="#">ABOUT</a>
+        <a href="#">RESOURCES</a>
+        <a href="tel:205-823-4440">205.823.4440</a>
+        <a href="#">LET'S TALK</a>p 
+    </nav>
+
+    <main>
+        <!-- Main content goes here -->
+    </main>
+
+    <script >
+const menuBtn = document.getElementById("menuBtn");
+const sideNav = document.getElementById("sideNav");
+const one = document.getElementById('one');
+const two = document.getElementById('two');
+const three = document.getElementById('three');
+
+
+menuBtn.onclick = function() {
+    if (sideNav.style.width === "250px") {
+        sideNav.style.width = "0";
+        one.style.rotate = "0deg";
+        three.style.rotate= "0deg";
+        one.style.marginBottom = "3px";
+        three.style.marginBottom = "0px";
+        two.style.display="block";
+        two.style.marginLeft="0px";
+        
+    } else {
+        sideNav.style.width = "250px";
+        one.style.rotate = "45deg";
+        one.style.marginTop = "5px";
+       two.style.transition = "5sec";
+      two.style.
+        
+        three.style.rotate= "125deg";
+        
+    }
+}
+
+// constractor
+// function surya(a,b,c){
+//     this.Name=a;
+//     this.age=b;
+//     this.city=c
+// }
+
+// // can't add data called prototype
+// // surya.nanality ="india"
+// const Dad = new surya("surya",21,"erode");
+
+
+//  alert(Dad.Name)
+
+
+
+
+
+
+
+//  inheritence
+
+// class surya {
+//     add(){
+//         this.Name ="suryraj";
+//         alert(this.Name)
+        
+      
+//     }
+// }
+
+// class Ajmal extends surya{
+
+// }
+
+// const myName = new Ajmal();
+
+// myNam.add()
+ 
+
+//     </script>
+</body>
+</html>
